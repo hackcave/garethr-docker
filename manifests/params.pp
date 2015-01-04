@@ -33,9 +33,9 @@ class docker::params {
           $docker_command = $docker_command_default
         }
         default: {
-          $package_name   = 'docker.io'
-          $service_name   = 'docker.io'
-          $docker_command = 'docker.io'
+          $package_name   = 'lxc-docker'
+          $service_name   = 'docker'
+          $docker_command = 'docker'
         }
       }
       $package_source_location = 'https://get.docker.io/ubuntu'
