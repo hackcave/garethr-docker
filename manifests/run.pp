@@ -28,6 +28,7 @@ define docker::run(
   $extra_parameters = undef,
   $pull_on_start = false,
   $depends = [],
+  $cleanup = false,
 ) {
   include docker::params
   $docker_command = $docker::params::docker_command
@@ -52,6 +53,7 @@ define docker::run(
   validate_bool($privileged)
   validate_bool($detach)
   validate_bool($restart_service)
+  validate_bool($cleanup)
 
   $extra_parameters_array = any2array($extra_parameters)
   $depends_array = any2array($depends)
