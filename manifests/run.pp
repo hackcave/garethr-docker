@@ -36,7 +36,7 @@ define docker::run(
 
   validate_re($image, '^[\S]*$')
   validate_re($title, '^[\S]*$')
-  validate_re($memory_limit, '^[\d]*(b|k|m|g)$')
+  validate_re($memory_limit, '^[\d]*(b|k|m|g)?$')
   validate_string($docker_command)
   validate_string($service_name)
   if $command {
