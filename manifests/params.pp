@@ -38,7 +38,7 @@ class docker::params {
           $docker_command = 'docker'
         }
       }
-      $package_source_location = 'https://get.docker.io/ubuntu'
+      $package_source_location = 'https://get.docker.com/ubuntu'
     }
     'RedHat' : {
       if $::operatingsystem == 'Fedora' {
